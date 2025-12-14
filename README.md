@@ -89,6 +89,23 @@ Key features:
 - Batch command execution and deployment optimization
 - Real-time monitoring and health checks
 
+## Visual Network Canvas
+
+At the core of NetTools-VelesAI is a **visual network canvas** that allows engineers to *see* the network instead of parsing text configurations.
+
+The canvas provides:
+- A live, interactive topology view across sites and vendors
+- Visual representation of devices, links, zones, and dependencies
+- Context-aware actions (inspect, configure, validate, deploy)
+- Real-time status indicators (health, drift, VPN state)
+
+The visual layer acts as a **reasoning surface**:
+changes, risks, and dependencies are visible before commands are executed.
+
+![Visual Network Canvas – Topology View](docs/images/canvas-topology.png)
+![Visual Network Canvas – Device Context](docs/images/canvas-device-context.png)
+
+
 ### VelesAI – AI Assistant
 
 An AI-powered assistant designed to support engineers, not replace them.
@@ -99,6 +116,22 @@ Capabilities:
 - Tool-based reasoning (inventory, analysis, config, knowledge)
 - Web search and vulnerability knowledge integration
 - Streaming responses and file-assisted analysis
+
+### Financial & Lifecycle Controls
+
+NetTools-VelesAI connects **technical network state** with **financial and lifecycle awareness**.
+
+Capabilities include:
+- Device-level CapEx and OpEx tracking
+- License and support contract visibility
+- Firmware lifecycle awareness (recommended, non-standard, end-of-life)
+- CSV import/export for finance, inventory, and audits
+- Aggregated cost and risk views per site or region
+
+This enables engineering, security, and finance teams to reason over the **same source of truth**.
+
+![Financial Overview – Devices & Lifecycle](docs/images/finance-overview.png)
+![CSV Import & Export](docs/images/csv-import.png)
 
 ### Device & Site Management
 
