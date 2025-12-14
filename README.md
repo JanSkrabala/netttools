@@ -1,17 +1,19 @@
-# NetTools-VelesAI
+# NetTools‑VelesAI
 
-**Description:** Enterprise-grade network device management platform with AI-powered assistance and a unified control plane
+Enterprise-grade, vendor-agnostic network device management platform with AI-powered assistance and a unified control plane.
 
 ---
 
-<!-- TOC -->
 ## Table of contents
 
 - [Overview](#overview)
 - [Architecture Overview](#architecture-overview)
 - [Core Capabilities](#core-capabilities)
   - [Unified Control Plane (UCP)](#unified-control-plane-ucp)
+  - [Visual Network Canvas](#visual-network-canvas)
   - [VelesAI – AI Assistant](#velesai--ai-assistant)
+  - [Vulnerabilities & Compliance](#vulnerabilities--compliance)
+  - [Financial & Lifecycle Controls](#financial--lifecycle-controls)
   - [Device & Site Management](#device--site-management)
 - [Technology Stack](#technology-stack)
   - [Backend](#backend)
@@ -25,37 +27,31 @@
 - [Roadmap](#roadmap)
 - [Project Status](#project-status)
 - [License](#license)
-<!-- /TOC -->
 
 ---
-Overview
 
-NetTools-VelesAI is an enterprise-grade, vendor-agnostic network management platform designed to replace text-heavy, CLI-driven workflows with visual network reasoning augmented by AI.
+## Overview
 
-The platform unifies network topology, configuration state, security posture, and financial impact into a single operational view, enabling engineers and decision-makers to see the network instead of parsing fragmented outputs and spreadsheets.
+NetTools‑VelesAI is an enterprise-grade, vendor-agnostic network management platform designed to replace text-heavy, CLI-driven workflows with a visual, AI-augmented operational model.
 
-NetTools-VelesAI combines:
+The platform unifies topology, configuration state, security posture, and financial impact into a single operational view so engineers and decision-makers can see the network rather than parsing text configurations.
 
-a Unified Control Plane for managing multi-vendor network devices
+NetTools‑VelesAI combines:
+- a Unified Control Plane for managing multi-vendor network devices
+- a visual network canvas for topology, dependency, and change-impact analysis
+- AI-assisted reasoning for configuration, validation, and troubleshooting
+- vulnerability and lifecycle awareness (CVEs, firmware versions, end-of-life status)
+- financial and operational context (CSV-based cost, inventory, and compliance data)
 
-a visual network canvas for topology, dependencies, and change-impact analysis
+The visual canvas is the primary interaction surface, linking devices, policies, VPNs, vulnerabilities, and costs into a coherent, continuously updated model. AI augments this model by providing context-aware explanations, risk assessment, and guided actions, while keeping humans firmly in control of every operational decision.
 
-AI-assisted reasoning for configuration, validation, and troubleshooting
+NetTools‑VelesAI is built for complex, multi-site, multi-vendor environments where reliability, clarity, security, and operational cost control are critical.
 
-vulnerability and lifecycle awareness (CVEs, firmware versions, end-of-life status)
-
-financial and operational context, including CSV-based cost, inventory, and compliance data
-
-The visual canvas acts as the primary interaction surface, linking devices, policies, VPNs, vulnerabilities, and costs into a coherent, continuously updated model of the network.
-
-AI augments this model by providing context-aware explanations, risk assessment, and guided actions, while keeping humans firmly in control of every operational decision.
-
-NetTools-VelesAI is built for complex, multi-site, multi-vendor environments where reliability, clarity, security, and operational cost control are critical — particularly in enterprise, industrial, and critical-infrastructure networks.
 ---
 
 ## Architecture Overview
 
-NetTools-VelesAI follows a modern, layered architecture with a clear separation of concerns:
+NetTools‑VelesAI follows a modern, layered architecture with a clear separation of concerns.
 
 Presentation layer
 - Web UI (React 19)
@@ -92,7 +88,7 @@ Integration layer
 A next-generation control plane for enterprise and industrial networks.
 
 Key features:
-- Multi-vendor device support (VyOS, Cisco IOS / IOS-XE, Juniper, OPNsense)
+- Multi-vendor device support (VyOS, Cisco IOS / IOS‑XE, Juniper, OPNsense)
 - Configuration lifecycle: draft → pending → applied → confirmed
 - Commit-confirm pattern with automatic rollback
 - Firewall, VPN, and service policy management
@@ -100,9 +96,9 @@ Key features:
 - Batch command execution and deployment optimization
 - Real-time monitoring and health checks
 
-## Visual Network Canvas
+### Visual Network Canvas
 
-At the core of NetTools-VelesAI is a **visual network canvas** that allows engineers to *see* the network instead of parsing text configurations.
+At the core of NetTools‑VelesAI is a visual network canvas that enables engineers to see the network instead of parsing raw configuration text.
 
 The canvas provides:
 - A live, interactive topology view across sites and vendors
@@ -110,12 +106,10 @@ The canvas provides:
 - Context-aware actions (inspect, configure, validate, deploy)
 - Real-time status indicators (health, drift, VPN state)
 
-The visual layer acts as a **reasoning surface**:
-changes, risks, and dependencies are visible before commands are executed.
+The visual layer acts as a reasoning surface: changes, risks, and dependencies are visible before commands are executed.
 
 ![Visual Network Canvas – Topology View](docs/images/canvas-topology.png)
 ![Visual Network Canvas – Device Context](docs/images/canvas-device-context.png)
-
 
 ### VelesAI – AI Assistant
 
@@ -128,9 +122,9 @@ Capabilities:
 - Web search and vulnerability knowledge integration
 - Streaming responses and file-assisted analysis
 
-## Vulnerabilities & Compliance
+### Vulnerabilities & Compliance
 
-NetTools-VelesAI includes a dedicated vulnerability and lifecycle awareness layer.
+NetTools‑VelesAI includes a dedicated vulnerability and lifecycle awareness layer.
 
 Features:
 - CVE ingestion and correlation (device, OS, firmware)
@@ -139,24 +133,23 @@ Features:
 - Upgrade recommendations aligned with vendor guidance
 - Compliance-ready views for audits and reporting
 
-Vulnerabilities are treated as **operational risk**, not isolated alerts.
+Vulnerabilities are treated as operational risk, not isolated alerts.
 
 ![Vulnerability Dashboard](docs/images/vulnerabilities-dashboard.png)
 ![End-of-Life & Compliance View](docs/images/eol-compliance.png)
 
-
 ### Financial & Lifecycle Controls
 
-NetTools-VelesAI connects **technical network state** with **financial and lifecycle awareness**.
+NetTools‑VelesAI connects technical network state with financial and lifecycle awareness.
 
-Capabilities include:
+Capabilities:
 - Device-level CapEx and OpEx tracking
 - License and support contract visibility
 - Firmware lifecycle awareness (recommended, non-standard, end-of-life)
 - CSV import/export for finance, inventory, and audits
 - Aggregated cost and risk views per site or region
 
-This enables engineering, security, and finance teams to reason over the **same source of truth**.
+This enables engineering, security, and finance teams to reason over the same source of truth.
 
 ![Financial Overview – Devices & Lifecycle](docs/images/finance-overview.png)
 ![CSV Import & Export](docs/images/csv-import.png)
@@ -209,15 +202,35 @@ This enables engineering, security, and finance teams to reason over the **same 
 - Python 3.12+
 - Node.js 18+
 - PostgreSQL 16+
-- Ollama (for AI features; optional if you plan to run AI features locally)
-- Docker (optional, recommended for local sandbox)
+- Ollama (optional — required for local AI features)
+- Docker (optional, recommended for a local sandbox)
 
+Example: create a Python venv and install dependencies
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Example: install frontend dependencies
+```bash
+cd frontend
+npm install
+```
+
+### Running locally (example)
+
+This repo includes Docker Compose for a quick local sandbox. Example:
+```bash
+docker compose up --build
+```
+Adjust environment variables in .env for database credentials, secrets, and any local Ollama settings.
 
 ---
 
 ## Security Architecture
 
-- Encrypted credential storage (AES-256)
+- Encrypted credential storage (AES‑256)
 - Role-based access control (RBAC)
 - SSH key and certificate-based device authentication
 - Mutual TLS for agent communication
@@ -247,11 +260,10 @@ This enables engineering, security, and finance teams to reason over the **same 
 
 ## Project Status
 
-Actively developed — MVP+ with working UI, backend, and AI integration. Designed for pilot deployments with enterprise / industrial partners.
+Actively developed — MVP+ with working UI, backend, and AI integration. Designed for pilot deployments with enterprise and industrial partners.
 
 ---
 
 ## License
 
 License will be defined prior to first public release / pilot agreement.
-
