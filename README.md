@@ -96,7 +96,7 @@ Key features:
 - Batch command execution and deployment optimization
 - Real-time monitoring and health checks
 
-  ![Unified Control Plane – Device Context](ucp.png)
+  ![Unified Control Plane – Device Context](UCP.png)
 
 ### Visual Network Canvas
 
@@ -111,7 +111,7 @@ The canvas provides:
 The visual layer acts as a reasoning surface: changes, risks, and dependencies are visible before commands are executed.
 
 
-![Visual Network Canvas – Device Context](visualcanvas.png)
+![Visual Network Canvas – Device Context](VisualCanvas.png)
 
 ### VelesAI – AI Assistant
 
