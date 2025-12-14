@@ -1,6 +1,5 @@
 # NetTools-VelesAI
 
-**Version:** 2.2.0  
 **Description:** Enterprise-grade network device management platform with AI-powered assistance and a unified control plane
 
 ---
@@ -152,47 +151,6 @@ Capabilities:
 - Ollama (for AI features; optional if you plan to run AI features locally)
 - Docker (optional, recommended for local sandbox)
 
-Example commands to check versions:
-```bash
-python --version
-node --version
-psql --version
-```
-
-### Running locally (example)
-
-1. Clone the repository:
-```bash
-git clone https://github.com/JanSkrabala/netttools.git
-cd netttools
-```
-
-2. (Optional) Start dependent services with Docker Compose:
-```bash
-docker compose up -d
-# This can start PostgreSQL, a local Ollama instance (if available), etc.
-```
-
-3. Create and activate a Python virtual environment, install backend deps:
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-4. Install frontend dependencies and start dev server:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-5. Start the backend (example):
-```bash
-uvicorn backend.main:app --reload
-```
-
-Adjust commands to match actual project layout and entrypoints (names above are illustrative).
 
 ---
 
@@ -219,12 +177,10 @@ Adjust commands to match actual project layout and entrypoints (names above are 
 
 ## Roadmap (High Level)
 
-- Kubernetes deployment
 - Multi-region support
 - Predictive analytics and AI-assisted remediation
 - External REST API for third-party integrations
 - Advanced authentication (OAuth2, SAML, MFA)
-- Mobile companion application
 
 ---
 
@@ -236,4 +192,5 @@ Actively developed — MVP+ with working UI, backend, and AI integration. Design
 
 ## License
 
-TBD
+License will be defined prior to first public release / pilot agreement.
+
