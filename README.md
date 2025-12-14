@@ -138,7 +138,7 @@ Features:
 - Compliance-ready views for audits and reporting
 
 Vulnerabilities are treated as operational risk, not isolated alerts.
-
+![Vulnerabilities View](Vuln.png)
 ![End-of-Life & Compliance View](Compliance.png)
 
 ### Financial & Lifecycle Controls
