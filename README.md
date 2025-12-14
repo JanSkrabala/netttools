@@ -124,6 +124,8 @@ Capabilities:
 - Web search and vulnerability knowledge integration
 - Streaming responses and file-assisted analysis
 
+![Veles – Device Context](Veles.png)
+
 ### Vulnerabilities & Compliance
 
 NetTools‑VelesAI includes a dedicated vulnerability and lifecycle awareness layer.
@@ -137,7 +139,6 @@ Features:
 
 Vulnerabilities are treated as operational risk, not isolated alerts.
 
-![Vulnerability Dashboard](docs/images/vulnerabilities-dashboard.png)
 ![End-of-Life & Compliance View](Compliance.png)
 
 ### Financial & Lifecycle Controls
@@ -153,7 +154,7 @@ Capabilities:
 
 This enables engineering, security, and finance teams to reason over the same source of truth.
 
-![CSV Import & Export](CSV.png)
+![Finnance – Finnance Context](Finnance.png)
 
 ### Device & Site Management
 
@@ -163,6 +164,8 @@ This enables engineering, security, and finance teams to reason over the same so
 - Vulnerability correlation (CVE → device impact)
 - Automated configuration backups
 - SSH / API-based data collection with vendor parsers
+
+![CSV Import & Export](CSV.png)
 
 ---
 
