@@ -96,6 +96,8 @@ Key features:
 - Batch command execution and deployment optimization
 - Real-time monitoring and health checks
 
+  ![Unified Control Plane – Device Context](ucp.png)
+
 ### Visual Network Canvas
 
 At the core of NetTools‑VelesAI is a visual network canvas that enables engineers to see the network instead of parsing raw configuration text.
@@ -108,8 +110,8 @@ The canvas provides:
 
 The visual layer acts as a reasoning surface: changes, risks, and dependencies are visible before commands are executed.
 
-![Visual Network Canvas – Topology View](docs/images/canvas-topology.png)
-![Visual Network Canvas – Device Context](docs/images/canvas-device-context.png)
+
+![Visual Network Canvas – Device Context](visualcanvas.png)
 
 ### VelesAI – AI Assistant
 
@@ -151,8 +153,7 @@ Capabilities:
 
 This enables engineering, security, and finance teams to reason over the same source of truth.
 
-![Financial Overview – Devices & Lifecycle](docs/images/finance-overview.png)
-![CSV Import & Export](docs/images/csv-import.png)
+![CSV Import & Export](csv.png)
 
 ### Device & Site Management
 
