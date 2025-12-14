@@ -1,118 +1,188 @@
-# NetTools — Visual Network Reasoning Platform
+NetTools-Sapion
 
-NetTools is a visual network reasoning platform that allows engineers and operators to **see, understand, and safely change complex networks**, instead of parsing thousands of lines of configuration text.
+AI-Augmented Visual Network Control Plane
 
-The platform combines a **visual network canvas** with **AI-assisted reasoning** to reduce operational risk in multi-vendor, multi-site enterprise and industrial networks.
+Enterprise-grade, vendor-agnostic network management platform combining
+visual network reasoning, policy abstraction, and AI-assisted operations.
 
----
+🚀 What is NetTools-Sapion?
 
-## Problem
+NetTools-Sapion is a next-generation network operations platform designed for modern, multi-vendor infrastructures.
 
-Modern enterprise and industrial networks are:
-- highly distributed (multi-site, hybrid IT/OT)
-- built from multiple vendors (Cisco, VyOS, OPNsense, Juniper, etc.)
-- managed through fragmented tools and raw CLI output
+It replaces fragmented CLI workflows and vendor-locked GUIs with a visual control plane, augmented by AI-assisted reasoning, validation, and automation.
 
-As a result:
-- engineers reason about networks **in text**, not structure
-- configuration changes are risky and error-prone
-- understanding impact across sites and devices is slow and manual
+Think:
 
-This leads to outages, security incidents, and high operational cost.
+“Terraform-level abstraction + firewall reasoning + live device control — without losing the engineer.”
 
----
+🧠 Core Idea
 
-## Solution
+Traditional network tools:
 
-NetTools introduces **visual network reasoning** as the primary interface.
+Are vendor-specific
 
-Key principles:
-- the network is represented as a **live graph**, not text
-- configurations are abstracted into a **vendor-agnostic model**
-- AI augments human decision-making instead of replacing engineers
+Are CLI-heavy
 
-The system allows operators to:
-- visually explore topology, policies, and dependencies
-- validate changes before deployment
-- reason about impact across devices and sites
-- manage heterogeneous environments through a single control plane
+Don’t scale cognitively
 
----
+Don’t reason about intent
 
-## Core Features
+NetTools-Sapion introduces:
 
-- **Visual Network Canvas**
-  - Drag-and-drop topology representation
-  - Real-time device and connection state
-  - Multi-site and multi-vendor support
+Visual network reasoning (sites, devices, links, policies)
 
-- **Unified Control Plane**
-  - Vendor-agnostic configuration model
-  - Candidate configuration workflow with commit-confirm
-  - Configuration drift and missing-config detection
+Vendor-agnostic intent models
 
-- **AI-Augmented Reasoning**
-  - Natural-language queries over network state
-  - Impact analysis and change explanations
-  - Retrieval-augmented reasoning over live configurations
+AI-assisted configuration, validation & explanation
 
-- **Device Integration**
-  - VyOS via secure WebSocket agents
-  - Cisco via direct SSH (Netmiko)
-  - Extensible vendor abstraction layer
+Real-time device interaction (agents + SSH)
 
----
+Human-in-the-loop safety (commit-confirm, rollback)
 
-## Target Users
+✨ Key Capabilities
+🧩 Unified Control Plane (UCP)
 
-- large enterprises
-- energy and utilities
-- industrial and manufacturing groups
-- operators of mission-critical networks
+Multi-vendor support: VyOS, Cisco, Juniper, OPNsense
 
-Typical environments include hundreds of devices across many locations, where **failure cost is high** and **change safety is critical**.
+Abstract policies → vendor-specific compilation
 
----
+Commit-confirm with automatic rollback
 
-## Technology Stack (high-level)
+Configuration drift detection
 
-- Backend: Python, FastAPI
-- Frontend: React, Tailwind
-- Network integration: SSH, WebSockets
-- Data: PostgreSQL, pgvector
-- AI: local LLM inference (Ollama), RAG
-- Deployment: containerised (Docker)
+Secure device onboarding
 
----
+🤖 AI-Augmented Operations (VelesAI)
 
-## Current Status
+Retrieval-Augmented Generation (RAG)
 
-- working MVP with visual canvas
-- live device integration (VyOS, Cisco)
-- unified configuration model
-- AI-assisted reasoning prototype
-- pilot-ready architecture
+Device-aware reasoning (configs, topology, state)
 
-The platform is currently in **pilot preparation phase** with focus on industrial and critical-infrastructure use cases.
+Explain why a config works or fails
 
----
+Assist with upgrades, CVEs, and changes
 
-## Vision
+No “AI autopilot” — engineer stays in control
 
-NetTools aims to become a **Cursor-like environment for network engineering**:
-- visual first
-- reasoning-driven
-- vendor-agnostic
-- human-in-the-loop AI
+🖥️ Visual Network Model
 
-A tool that allows engineers to **understand networks as systems**, not as text files.
+Sites, devices, links, VPNs, firewalls
 
----
+Real-time state & health
 
-## Author
+Visual diff of changes
 
-**Jan Skrabala**  
-Founder & CEO  
-Network architect with enterprise and critical-infrastructure experience
+Shared mental model for teams
 
-Contact: jan@skrabala.com
+🏗️ High-Level Architecture
+Frontend (React)
+   │
+   ├─ Visual Control Plane
+   ├─ AI Chat & Reasoning
+   └─ Live Terminal
+        │
+Backend (FastAPI)
+   │
+   ├─ Unified Control Plane
+   ├─ Policy Compilers
+   ├─ AI Orchestration
+   └─ WebSocket / SSH
+        │
+Devices (VyOS / Cisco / Others)
+
+
+AI runs locally (via Ollama) — no cloud dependency required.
+
+🛠️ Tech Stack (Summary)
+
+Backend
+
+FastAPI (Python 3.12)
+
+PostgreSQL + pgvector
+
+WebSockets + SSH
+
+Ollama (local LLM inference)
+
+Frontend
+
+React 19 + Vite
+
+Tailwind CSS
+
+XTerm.js (live device terminal)
+
+Security
+
+Encrypted credentials
+
+Certificate-based agents
+
+Role-based access control
+
+🎯 Target Users
+
+Network & Security Engineers
+
+MSPs / Enterprises with multi-vendor environments
+
+Teams scaling beyond CLI-only workflows
+
+Organisations needing auditability, safety & clarity
+
+🔭 Why This Matters
+
+Networks are no longer static.
+
+They are:
+
+Multi-cloud
+
+Multi-vendor
+
+Policy-heavy
+
+Security-critical
+
+NetTools-Sapion treats the network as a reasoned system, not just a set of commands.
+
+🧪 Project Status
+
+Actively developed
+
+Functional MVP (local + lab environments)
+
+Designed for enterprise-scale evolution
+
+Architecture validated through real-world network operations
+
+📌 Roadmap (High-Level)
+
+Advanced policy simulation
+
+Predictive change impact analysis
+
+Compliance & risk scoring
+
+Enterprise integrations
+
+Scale-up deployments
+
+📄 Documentation
+
+Detailed architecture and internals live in /md:
+
+ARCHITECTURE_OVERVIEW.md
+
+UNIFIED_CONTROL_PLANE.md
+
+AI_REASONING_MODEL.md
+
+⚠️ Disclaimer
+
+This project is not a toy and not a generic “AI wrapper”.
+
+It is built by a network engineer for network engineers —
+with AI used where it adds leverage, not magic.
+
