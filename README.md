@@ -199,39 +199,6 @@ This enables engineering, security, and finance teams to reason over the same so
 
 ---
 
-## Quick Start
-
-### Prerequisites
-
-- Python 3.12+
-- Node.js 18+
-- PostgreSQL 16+
-- Ollama (optional — required for local AI features)
-- Docker (optional, recommended for a local sandbox)
-
-Example: create a Python venv and install dependencies
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-Example: install frontend dependencies
-```bash
-cd frontend
-npm install
-```
-
-### Running locally (example)
-
-This repo includes Docker Compose for a quick local sandbox. Example:
-```bash
-docker compose up --build
-```
-Adjust environment variables in .env for database credentials, secrets, and any local Ollama settings.
-
----
-
 ## Security Architecture
 
 - Encrypted credential storage (AES‑256)
