@@ -1,188 +1,190 @@
-NetTools-Sapion
+# NetTools-VelesAI
 
-AI-Augmented Visual Network Control Plane
+**Version:** 2.2.0  
+**Description:** Enterprise-grade network device management platform with AI-powered assistance and a unified control plane  
 
-Enterprise-grade, vendor-agnostic network management platform combining
-visual network reasoning, policy abstraction, and AI-assisted operations.
+---
 
-🚀 What is NetTools-Sapion?
+## Overview
 
-NetTools-Sapion is a next-generation network operations platform designed for modern, multi-vendor infrastructures.
+**NetTools-VelesAI** is an enterprise-grade, vendor-agnostic network management platform designed to replace text-heavy, CLI-driven workflows with **visual network reasoning augmented by AI**.
 
-It replaces fragmented CLI workflows and vendor-locked GUIs with a visual control plane, augmented by AI-assisted reasoning, validation, and automation.
+The platform combines:
+- a **Unified Control Plane** for multi-vendor network devices
+- a **visual canvas** for understanding topology and dependencies
+- **AI-assisted reasoning** for configuration, validation, and troubleshooting
 
-Think:
+It is built for complex, multi-site, multi-vendor environments where reliability, clarity, and operational safety matter.
 
-“Terraform-level abstraction + firewall reasoning + live device control — without losing the engineer.”
+---
 
-🧠 Core Idea
+## Architecture Overview
 
-Traditional network tools:
+NetTools-Sapion follows a modern, layered architecture with clear separation of concerns.
 
-Are vendor-specific
+Presentation Layer
+├─ Web UI (React 19)
+├─ API Clients (REST / WebSocket)
+└─ Mobile UI (planned)
 
-Are CLI-heavy
+Application Layer
+├─ Frontend (Vite + React)
+├─ Backend (FastAPI)
+└─ WebSocket Server
 
-Don’t scale cognitively
+Business Logic Layer
+├─ Unified Control Plane
+├─ Policy & Config Services
+└─ AI Tool Orchestration
 
-Don’t reason about intent
+Data Layer
+├─ PostgreSQL
+├─ pgvector (RAG embeddings)
+└─ Encrypted credential storage
 
-NetTools-Sapion introduces:
-
-Visual network reasoning (sites, devices, links, policies)
-
-Vendor-agnostic intent models
-
-AI-assisted configuration, validation & explanation
-
-Real-time device interaction (agents + SSH)
-
-Human-in-the-loop safety (commit-confirm, rollback)
-
-✨ Key Capabilities
-🧩 Unified Control Plane (UCP)
-
-Multi-vendor support: VyOS, Cisco, Juniper, OPNsense
-
-Abstract policies → vendor-specific compilation
-
-Commit-confirm with automatic rollback
-
-Configuration drift detection
-
-Secure device onboarding
-
-🤖 AI-Augmented Operations (VelesAI)
-
-Retrieval-Augmented Generation (RAG)
-
-Device-aware reasoning (configs, topology, state)
-
-Explain why a config works or fails
-
-Assist with upgrades, CVEs, and changes
-
-No “AI autopilot” — engineer stays in control
-
-🖥️ Visual Network Model
-
-Sites, devices, links, VPNs, firewalls
-
-Real-time state & health
-
-Visual diff of changes
-
-Shared mental model for teams
-
-🏗️ High-Level Architecture
-Frontend (React)
-   │
-   ├─ Visual Control Plane
-   ├─ AI Chat & Reasoning
-   └─ Live Terminal
-        │
-Backend (FastAPI)
-   │
-   ├─ Unified Control Plane
-   ├─ Policy Compilers
-   ├─ AI Orchestration
-   └─ WebSocket / SSH
-        │
-Devices (VyOS / Cisco / Others)
+Integration Layer
+├─ VyOS agents (WebSocket)
+├─ Cisco devices (SSH)
+├─ Ollama (local LLM)
+└─ External APIs
 
 
-AI runs locally (via Ollama) — no cloud dependency required.
+---
 
-🛠️ Tech Stack (Summary)
+## Core Capabilities
 
-Backend
+### Unified Control Plane (UCP)
 
-FastAPI (Python 3.12)
+A next-generation control plane for enterprise and industrial networks.
 
-PostgreSQL + pgvector
+Key features:
+- Multi-vendor device support (VyOS, Cisco IOS / IOS-XE, Juniper, OPNsense)
+- Configuration lifecycle: draft → pending → applied → confirmed
+- Commit-confirm pattern with automatic rollback
+- Firewall, VPN, and service policy management
+- Configuration drift detection
+- Batch command execution and deployment optimisation
+- Real-time monitoring and health checks
 
-WebSockets + SSH
+---
 
-Ollama (local LLM inference)
+### VelesAI – AI Assistant
 
-Frontend
+An AI-powered assistant designed to **support engineers**, not replace them.
 
-React 19 + Vite
+Capabilities:
+- Retrieval-Augmented Generation (RAG) over device configurations
+- Context-aware chat with persistent memory
+- Tool-based reasoning (inventory, analysis, config, knowledge)
+- Web search and vulnerability knowledge integration
+- Streaming responses and file-assisted analysis
 
-Tailwind CSS
+---
 
-XTerm.js (live device terminal)
+### Device & Site Management
 
-Security
+- Multi-vendor inventory and classification
+- Site-based topology organisation
+- Firmware lifecycle and compliance tracking
+- Vulnerability correlation (CVE → device impact)
+- Automated configuration backups
+- SSH / API-based data collection with vendor parsers
 
-Encrypted credentials
+---
 
-Certificate-based agents
+## Technology Stack
+
+### Backend
+
+- **FastAPI** – async web framework
+- **SQLModel / SQLAlchemy 2.0**
+- **PostgreSQL 16+**
+- **pgvector** – semantic embeddings
+- **Ollama** – local LLM inference
+- **Paramiko / Netmiko** – device connectivity
+- **WebSockets** – real-time agent communication
+- **Prometheus** – metrics
+- **Sentry** – error tracking
+
+### Frontend
+
+- **React 19**
+- **Vite**
+- **Tailwind CSS**
+- **Radix UI**
+- **React Router**
+- **Axios**
+- **XTerm.js** – interactive terminal
+- **Chart.js** – visual analytics
+
+### Infrastructure
+
+- Docker & Docker Compose
+- Nginx (production reverse proxy)
+- GitHub Actions (CI/CD)
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+- Python 3.12+
+- Node.js 18+
+- PostgreSQL 16+
+- Ollama (for AI features)
+- Docker (optional)
+
+---
+
+🔐 Security Architecture
+
+Encrypted credential storage (AES-256)
 
 Role-based access control
 
-🎯 Target Users
+SSH key and certificate-based device authentication
 
-Network & Security Engineers
+Mutual TLS for agent communication
 
-MSPs / Enterprises with multi-vendor environments
+Full audit and communication logging
 
-Teams scaling beyond CLI-only workflows
+Secure defaults throughout the stack
 
-Organisations needing auditability, safety & clarity
+📊 Observability
 
-🔭 Why This Matters
+Structured JSON logging
 
-Networks are no longer static.
+Correlation IDs for request tracing
 
-They are:
+Prometheus metrics endpoint
 
-Multi-cloud
+Health checks for database, agents, and external services
 
-Multi-vendor
+Real-time device and VPN status monitoring
 
-Policy-heavy
+🗺️ Roadmap (High Level)
 
-Security-critical
+Kubernetes deployment
 
-NetTools-Sapion treats the network as a reasoned system, not just a set of commands.
+Multi-region support
 
-🧪 Project Status
+Predictive analytics and AI-assisted remediation
+
+External REST API for third-party integrations
+
+Advanced authentication (OAuth2, SAML, MFA)
+
+Mobile companion application
+
+🚧 Project Status
 
 Actively developed
 
-Functional MVP (local + lab environments)
+MVP+ with working UI, backend, and AI integration
 
-Designed for enterprise-scale evolution
+Designed for pilot deployments with enterprise / industrial partners
 
-Architecture validated through real-world network operations
+📄 License
 
-📌 Roadmap (High-Level)
-
-Advanced policy simulation
-
-Predictive change impact analysis
-
-Compliance & risk scoring
-
-Enterprise integrations
-
-Scale-up deployments
-
-📄 Documentation
-
-Detailed architecture and internals live in /md:
-
-ARCHITECTURE_OVERVIEW.md
-
-UNIFIED_CONTROL_PLANE.md
-
-AI_REASONING_MODEL.md
-
-⚠️ Disclaimer
-
-This project is not a toy and not a generic “AI wrapper”.
-
-It is built by a network engineer for network engineers —
-with AI used where it adds leverage, not magic.
-
+TBD
