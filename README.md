@@ -56,7 +56,6 @@ NetTools‑VelesAI follows a modern, layered architecture with a clear separatio
 Presentation layer
 - Web UI (React 19)
 - API clients (REST / WebSocket)
-- Mobile UI (planned)
 
 Application layer
 - Frontend (Vite + React)
