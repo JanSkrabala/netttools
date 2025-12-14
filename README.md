@@ -117,6 +117,23 @@ Capabilities:
 - Web search and vulnerability knowledge integration
 - Streaming responses and file-assisted analysis
 
+## Vulnerabilities & Compliance
+
+NetTools-VelesAI includes a dedicated vulnerability and lifecycle awareness layer.
+
+Features:
+- CVE ingestion and correlation (device, OS, firmware)
+- Impact mapping: vulnerability → affected devices → sites
+- End-of-life and end-of-support tracking
+- Upgrade recommendations aligned with vendor guidance
+- Compliance-ready views for audits and reporting
+
+Vulnerabilities are treated as **operational risk**, not isolated alerts.
+
+![Vulnerability Dashboard](docs/images/vulnerabilities-dashboard.png)
+![End-of-Life & Compliance View](docs/images/eol-compliance.png)
+
+
 ### Financial & Lifecycle Controls
 
 NetTools-VelesAI connects **technical network state** with **financial and lifecycle awareness**.
