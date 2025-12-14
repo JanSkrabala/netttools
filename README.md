@@ -28,18 +28,29 @@
 <!-- /TOC -->
 
 ---
+Overview
 
-## Overview
+NetTools-VelesAI is an enterprise-grade, vendor-agnostic network management platform designed to replace text-heavy, CLI-driven workflows with visual network reasoning augmented by AI.
 
-**NetTools-VelesAI** is an enterprise-grade, vendor-agnostic network management platform designed to replace text-heavy, CLI-driven workflows with **visual network reasoning augmented by AI**.
+The platform unifies network topology, configuration state, security posture, and financial impact into a single operational view, enabling engineers and decision-makers to see the network instead of parsing fragmented outputs and spreadsheets.
 
-The platform combines:
-- a **Unified Control Plane** for multi-vendor network devices
-- a **visual canvas** for understanding topology and dependencies
-- **AI-assisted reasoning** for configuration, validation, and troubleshooting
+NetTools-VelesAI combines:
 
-It is built for complex, multi-site, multi-vendor environments where reliability, clarity, and operational safety matter.
+a Unified Control Plane for managing multi-vendor network devices
 
+a visual network canvas for topology, dependencies, and change-impact analysis
+
+AI-assisted reasoning for configuration, validation, and troubleshooting
+
+vulnerability and lifecycle awareness (CVEs, firmware versions, end-of-life status)
+
+financial and operational context, including CSV-based cost, inventory, and compliance data
+
+The visual canvas acts as the primary interaction surface, linking devices, policies, VPNs, vulnerabilities, and costs into a coherent, continuously updated model of the network.
+
+AI augments this model by providing context-aware explanations, risk assessment, and guided actions, while keeping humans firmly in control of every operational decision.
+
+NetTools-VelesAI is built for complex, multi-site, multi-vendor environments where reliability, clarity, security, and operational cost control are critical — particularly in enterprise, industrial, and critical-infrastructure networks.
 ---
 
 ## Architecture Overview
