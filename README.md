@@ -138,7 +138,7 @@ Features:
 Vulnerabilities are treated as operational risk, not isolated alerts.
 
 ![Vulnerability Dashboard](docs/images/vulnerabilities-dashboard.png)
-![End-of-Life & Compliance View](docs/images/eol-compliance.png)
+![End-of-Life & Compliance View](Compliance.png)
 
 ### Financial & Lifecycle Controls
 
@@ -153,7 +153,7 @@ Capabilities:
 
 This enables engineering, security, and finance teams to reason over the same source of truth.
 
-![CSV Import & Export](csv.png)
+![CSV Import & Export](CSV.png)
 
 ### Device & Site Management
 
