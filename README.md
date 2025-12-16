@@ -4,7 +4,7 @@ Enterprise-grade, vendor-agnostic network device management platform with AI-pow
 
 ---
 
-## Table of contents
+## Table of contents.
 
 - [Overview](#overview)
 - [Architecture Overview](#architecture-overview)
